@@ -2,9 +2,6 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
-    return "Hello World!"
-
 def do_gif():
     print "Making photo and gif!"
 
