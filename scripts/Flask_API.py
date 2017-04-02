@@ -1,9 +1,20 @@
-from flask import Flask
+from flask import Flask, request
+from flask_restful import Resource, Api
+
 app = Flask(__name__)
+api = Api(app)
 
-@app.route("/")
-def do_gif():
-    print "Making photo and gif!"
+pyasn_photo_path = '/home/pi/Pictures/'
+#asndb = pyasn.pyasn(pyasn_dat_file)
 
-if __name__ == "__main__":
+class make_gif(Resource):
+    def post(self):
+        response = 'Made photo!'
+        return response
+
+api.add_resource(make_gif, '/make_gif')
+
+if __name__ == '__main__':
     app.run()
+
+
