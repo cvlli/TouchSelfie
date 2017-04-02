@@ -1,9 +1,9 @@
-'''
+"""
 Open source photo booth.
 
 Kevin Osborn and Justin Shaw
 WyoLum.com
-'''
+"""
 
 ## imports
 from tkkb import Tkkb

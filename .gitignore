@@ -15,3 +15,12 @@ scripts/*.py~
 scripts/*.cred
 scripts/*.json
 scripts/*.dat
+
+# ignore unversioned files
+.idea/TouchSelfie.iml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+*.pdf
+Flask.pdf
