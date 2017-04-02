@@ -11,6 +11,9 @@ class make_gif(Resource):
     def post(self):
         response = 'Made photo!'
         return response
+    def __get__(self, instance, owner):
+        response = 'Made photo!'
+        return response
 
 api.add_resource(make_gif, '/make_gif')
 
