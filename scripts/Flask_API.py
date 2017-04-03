@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 from flask_restful import Resource, Api
 
 app = Flask(__name__)
@@ -7,6 +7,11 @@ api = Api(app)
 @app.route('/')
 def index():
     return 'Index Page'
+
+@app.route('/hello/')
+@app.route('/hello/<name>')
+def hello(name=None):
+    return render_template('hello.html', name=name)
 
 photo_path = '/home/pi/Pictures/'
 
