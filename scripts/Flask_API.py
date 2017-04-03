@@ -6,7 +6,7 @@ api = Api(app)
 
 @app.route('/')
 def index():
-    return 'Index Page'
+    return '<html><body><h1>Hello World</h1></body></html>'
 
 @app.route('/hello/')
 @app.route('/hello/<name>')
@@ -37,6 +37,6 @@ api.add_resource(make_gif, '/login')
 
 if __name__ == '__main__':
 #    app.run()
-    app.run(host='0.0.0.0') # To run on host IP
+    app.run(host='0.0.0.0',debug = True) # To run on host IP
 
 
